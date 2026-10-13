@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Barisan & Deret</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📐 Kalkulator Barisan & Deret</h1>
+    <p>Hitung suku ke-n, jumlah deret, dan lihat tabel suku dengan desain modern ✨</p>
+  </header>
+
+  <main class="container">
+    <!-- Card Input -->
+    <section class="card">
+      <h2>Input Data</h2>
+      <label for="jenis">Jenis:</label>
+      <select id="jenis">
+        <option value="aritmetika">Aritmetika</option>
+        <option value="geometri">Geometri</option>
+      </select>
+
+      <label for="a1">Suku pertama (a₁):</label>
+      <input type="number" id="a1" placeholder="contoh: 2">
+
+      <label for="d">Beda / Rasio (d/r):</label>
+      <input type="number" id="d" placeholder="contoh: 3">
+
+      <label for="n">Jumlah suku (n):</label>
+      <input type="number" id="n" placeholder="contoh: 10">
+
+      <button onclick="hitung()">Hitung</button>
+      <button class="reset" onclick="resetForm()">Reset</button>
+    </section>
+
+    <!-- Card Hasil -->
+    <section class="card hasil-card">
+      <h2>Hasil Perhitungan</h2>
+      <div id="rumus-umum" class="rumus-umum"></div>
+      <div id="hasil" class="hasil"></div>
+    </section>
+
+    <!-- Card Tabel -->
+    <section class="card">
+      <h2>Daftar Suku</h2>
+      <div class="scroll-table">
+        <table id="tabel-suku">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Suku (aₙ)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- hasil tabel diisi JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Kalkulator Barisan & Deret | Dibuat dengan ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
